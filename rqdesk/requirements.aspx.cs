@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace rqdesk
 {
-    public partial class escritorio : System.Web.UI.Page
+    public partial class requirements : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
