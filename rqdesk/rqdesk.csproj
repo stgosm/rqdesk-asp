@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -44,8 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,8 +80,20 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="home.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="requirements.aspx" />
+    <Content Include="RQDESK.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RQDESK.edmx</DependentUpon>
+      <LastGenOutput>RQDESK.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="RQDESK.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RQDESK.edmx</DependentUpon>
+      <LastGenOutput>RQDESK.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
+    <Content Include="Registro_Usuarios.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -83,6 +106,13 @@
     <Compile Include="home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="requirements.aspx.cs">
       <DependentUpon>requirements.aspx</DependentUpon>
@@ -91,6 +121,21 @@
     <Compile Include="requirements.aspx.designer.cs">
       <DependentUpon>requirements.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RQDESK.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RQDESK.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RQDESK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RQDESK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RQDESK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RQDESK.edmx</DependentUpon>
+    </Compile>
     <Compile Include="rqdesk.Master.cs">
       <DependentUpon>rqdesk.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -98,10 +143,27 @@
     <Compile Include="rqdesk.Master.designer.cs">
       <DependentUpon>rqdesk.Master</DependentUpon>
     </Compile>
+    <Compile Include="Registro_Usuarios.aspx.cs">
+      <DependentUpon>Registro_Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro_Usuarios.aspx.designer.cs">
+      <DependentUpon>Registro_Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.cs">
+      <DependentUpon>RQDESK.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="rqdesk.Master" />
+    <EntityDeploy Include="RQDESK.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RQDESK.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="RQDESK.edmx.diagram">
+      <DependentUpon>RQDESK.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,7 +173,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="css\" />
+    <Folder Include="img\" />
+    <Folder Include="js\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
