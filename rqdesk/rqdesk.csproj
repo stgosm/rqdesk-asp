@@ -78,9 +78,75 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.Globalization.Calendars.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.ZipFile.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Net.Http.dll" />
+    <Content Include="bin\roslyn\System.Net.Sockets.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\rqdesk.dll" />
+    <Content Include="bin\rqdesk.pdb" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-reboot.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\styles.css" />
     <Content Include="Global.asax" />
     <Content Include="home.aspx" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\popper.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="obj\Debug\rqdesk.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\rqdesk.dll" />
+    <Content Include="obj\Debug\rqdesk.pdb" />
+    <Content Include="obj\Debug\TempPE\RQDESK.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\RQDESK.cs.dll" />
+    <Content Include="obj\Debug\TempPE\RQDESK.Designer.cs.dll" />
     <Content Include="requirements.aspx" />
     <Content Include="RQDESK.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -113,6 +179,8 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="requirements.aspx.cs">
       <DependentUpon>requirements.aspx</DependentUpon>
@@ -155,6 +223,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\bootstrap.bundle.js.map" />
+    <Content Include="js\bootstrap.bundle.min.js.map" />
+    <Content Include="js\bootstrap.js.map" />
+    <Content Include="js\bootstrap.min.js.map" />
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap-reboot.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\rqdesk.dll.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\RQDESK.csdl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\RQDESK.msl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\RQDESK.ssdl" />
+    <Content Include="obj\Debug\rqdesk.csproj.CopyComplete" />
+    <Content Include="obj\Debug\rqdesk.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\rqdesk.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
     <Content Include="rqdesk.Master" />
     <EntityDeploy Include="RQDESK.edmx">
@@ -173,9 +269,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\" />
     <Folder Include="img\" />
-    <Folder Include="js\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
