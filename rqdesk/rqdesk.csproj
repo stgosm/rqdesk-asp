@@ -93,10 +93,12 @@
       <DependentUpon>RQDESK.edmx</DependentUpon>
       <LastGenOutput>RQDESK.cs</LastGenOutput>
     </Content>
+    <Content Include="usuhis.aspx" />
     <Content Include="Web.config" />
     <Content Include="Registro_Usuarios.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="consulta.cs" />
     <Compile Include="Encriptar.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -161,6 +163,13 @@
     </Compile>
     <Compile Include="usuario.cs">
       <DependentUpon>RQDESK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuhis.aspx.cs">
+      <DependentUpon>usuhis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usuhis.aspx.designer.cs">
+      <DependentUpon>usuhis.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
