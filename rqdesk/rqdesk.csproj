@@ -131,6 +131,7 @@
     <Content Include="css\bootstrap-reboot.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\dashboard.css" />
     <Content Include="css\styles.css" />
     <Content Include="Global.asax" />
     <Content Include="home.aspx" />
@@ -139,6 +140,7 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\main.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="obj\Debug\rqdesk.csproj.FileListAbsolute.txt" />
