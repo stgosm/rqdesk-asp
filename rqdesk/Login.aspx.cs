@@ -22,7 +22,7 @@ namespace rqdesk
 
             using (SqlConnection cn = new SqlConnection("Data Source=TRABAJO2;Initial Catalog=RQ_final;Integrated Security=True "))
             {
-                SqlCommand cmd = new SqlCommand("select usuario, contrasena FROM usuario WHERE usuario ='" + us + "' AND contrasena = '" + pw + "'", cn);
+                SqlCommand cmd = new SqlCommand("select usuario, contrasena FROM usuario WHERE usuario ='" + us + "' AND contrasena = '" + Encriptar.GETSHA256(pw) + "'", cn);
                 cn.Open();
 
                 SqlDataReader dr = cmd.ExecuteReader();

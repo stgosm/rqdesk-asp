@@ -19,10 +19,23 @@ namespace rqdesk
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-          string  usuarioregistro = txtUsuarioRegistro.Text;
-            string contrasenaregistro = txtContraseñaRegistro.Text;
-            string privilegioregistro = SelectPriv.Value;
+         
 
+            using (RQ_finalEntities oPF = new RQ_finalEntities())
+            {
+                usuario oUsuarios = new usuario
+                {
+                usuario1 = txtUsuarioRegistro.Text,
+                contrasena=Encriptar.GETSHA256(txtContraseñaRegistro.Text),
+                privilegio = SelectPriv.Value
+
+            };
+                oPF.usuario.Add(oUsuarios);
+                oPF.SaveChanges();
+                txtUsuarioRegistro.Text = "";
+                txtContraseñaRegistro.Text = "";
+                SelectPriv.Value = "";
+            };
 
         }
     }

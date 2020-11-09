@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Historico_Usuarios.aspx" />
     <Content Include="home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="requirements.aspx" />
@@ -96,8 +97,16 @@
     <Content Include="Registro_Usuarios.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encriptar.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Historico_Usuarios.aspx.cs">
+      <DependentUpon>Historico_Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historico_Usuarios.aspx.designer.cs">
+      <DependentUpon>Historico_Usuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
