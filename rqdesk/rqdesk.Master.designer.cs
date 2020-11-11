@@ -33,22 +33,22 @@ namespace rqdesk
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control A1.
+        /// Control tabHome.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabHome;
 
         /// <summary>
-        /// Control A2.
+        /// Control tabRequirements.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A2;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabRequirements;
 
         /// <summary>
         /// Control tabHome02.
