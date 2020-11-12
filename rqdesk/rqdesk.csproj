@@ -150,6 +150,16 @@
     <Content Include="obj\Debug\TempPE\RQDESK.cs.dll" />
     <Content Include="obj\Debug\TempPE\RQDESK.Designer.cs.dll" />
     <Content Include="requirements.aspx" />
+    <Content Include="requirementsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>requirementsModel.edmx</DependentUpon>
+      <LastGenOutput>requirementsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="requirementsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>requirementsModel.edmx</DependentUpon>
+      <LastGenOutput>requirementsModel.cs</LastGenOutput>
+    </Content>
     <Content Include="RQDESK.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RQDESK.edmx</DependentUpon>
@@ -190,6 +200,21 @@
     </Compile>
     <Compile Include="requirements.aspx.designer.cs">
       <DependentUpon>requirements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="requirementsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>requirementsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="requirementsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>requirementsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="requirementsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>requirementsModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="RQDESK.Context.cs">
       <AutoGen>True</AutoGen>
@@ -261,6 +286,13 @@
     </EntityDeploy>
     <Content Include="RQDESK.edmx.diagram">
       <DependentUpon>RQDESK.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="requirementsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>requirementsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="requirementsModel.edmx.diagram">
+      <DependentUpon>requirementsModel.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
