@@ -133,7 +133,9 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\dashboard.css" />
     <Content Include="css\styles.css" />
+    <Content Include="Editar_Registros.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Historico_Usuarios.aspx" />
     <Content Include="home.aspx" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
@@ -170,12 +172,30 @@
       <DependentUpon>RQDESK.edmx</DependentUpon>
       <LastGenOutput>RQDESK.cs</LastGenOutput>
     </Content>
+    <Content Include="usuhis.aspx" />
     <Content Include="Web.config" />
     <Content Include="Registro_Usuarios.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="consulta.cs" />
+    <Compile Include="Editar.cs" />
+    <Compile Include="Editar_Registros.aspx.cs">
+      <DependentUpon>Editar_Registros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editar_Registros.aspx.designer.cs">
+      <DependentUpon>Editar_Registros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Encriptar.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Historico_Usuarios.aspx.cs">
+      <DependentUpon>Historico_Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historico_Usuarios.aspx.designer.cs">
+      <DependentUpon>Historico_Usuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -249,8 +269,16 @@
     <Compile Include="Registro_Usuarios.aspx.designer.cs">
       <DependentUpon>Registro_Usuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SQLusuarios.cs" />
     <Compile Include="usuario.cs">
       <DependentUpon>RQDESK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuhis.aspx.cs">
+      <DependentUpon>usuhis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usuhis.aspx.designer.cs">
+      <DependentUpon>usuhis.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
