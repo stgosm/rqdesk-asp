@@ -18,7 +18,7 @@ namespace rqdesk
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            Editar ed = new Editar();
+            Editar ed = new Editar(tdmagico);
            
         }
     }

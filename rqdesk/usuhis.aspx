@@ -47,7 +47,7 @@
         <tbody>
 		<asp:Repeater runat="server" ID="rptrqdesk" ItemType="rqdesk.usuario">
 			<ItemTemplate>
-				<td><asp:HiddenField ID="editarcamp" Value="<%# Item.id %>" runat="server" /></td>
+				<td id="tdmagico"><asp:HiddenField ID="editarcamp" Value="<%# Item.id %>" runat="server" /></td>
 				<td><%# Item.usuario1  %></td>
 				<td><%# Item.contrasena  %></td>
 				<td><%# Item.privilegio %></td>
