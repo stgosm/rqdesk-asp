@@ -5,31 +5,53 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Data;
+using System.Text;
+using System.Configuration;
 
 namespace rqdesk
 {
     public partial class requirements : System.Web.UI.Page
     {
+        StringBuilder card = new StringBuilder();
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (SqlConnection cn = new SqlConnection("Data Source=TRABAJO2;Initial Catalog=RQ_final;Integrated Security=True "))
+            using (SqlConnection cn = new SqlConnection("Data Source=DESKTOP-HN31V00;Initial Catalog = rqdesk;Trusted_Connection=true;"))
             {
-                SqlCommand cmd = new SqlCommand("select usuario, contrasena FROM usuario WHERE usuario ='" + us + "' AND contrasena = '" + pw + "'", cn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM requirements", cn);
                 cn.Open();
 
                 SqlDataReader dr = cmd.ExecuteReader();
 
-                if (dr.Read())
+                Response.Write("<script type='text/javascript'>alert('Datos no Encontrados')</script>");
+
+                card.Append("<table border='1'>");
+                card.Append("<tr><th>Name</th><th>Description</th><th>Name</th><th>Description</th><th>Name</th><th>Description</th>");
+                card.Append("</tr>");
+
+                if (dr.HasRows)
                 {
-                    Session["id"] = txtUsuario.Text;
-                    Response.Redirect("escritorio.aspx");
-                    cn.Close();
+                    while (dr.Read())
+                    {
+                        card.Append("<tr>");
+                        card.Append("<td>" + dr[0] + "</td>");
+                        card.Append("<td>" + dr[1] + "</td>");
+                        card.Append("<td>" + dr[2] + "</td>");
+                        card.Append("<td>" + dr[3] + "</td>");
+                        card.Append("<td>" + dr[4] + "</td>");
+                        card.Append("<td>" + dr[5] + "</td>");
+                        card.Append("</tr>");
+                    }
                 }
 
                 else
                 {
                     Response.Write("<script type='text/javascript'>alert('Datos no Encontrados')</script>");
                 }
+
+                card.Append("</table>");
+                PlaceHolder1.Controls.Add(new Literal { Text = card.ToString() });
+                cn.Close();
             }
         }
     }
