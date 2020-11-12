@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Editar_Registros.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Historico_Usuarios.aspx" />
     <Content Include="home.aspx" />
@@ -99,6 +100,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="consulta.cs" />
+    <Compile Include="Editar.cs" />
+    <Compile Include="Editar_Registros.aspx.cs">
+      <DependentUpon>Editar_Registros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editar_Registros.aspx.designer.cs">
+      <DependentUpon>Editar_Registros.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Encriptar.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

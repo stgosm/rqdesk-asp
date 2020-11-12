@@ -17,7 +17,7 @@
 	 <link href="css/icons//css/all.css" rel="stylesheet"/> 
 	<script>
 	$(document).ready(function () {
-		$('#example').DataTable();
+		$('#exa').DataTable();
 	});
 </script>
 <link rel="stylesheet"" href="css/styles.css" />
@@ -33,7 +33,7 @@
 <body>
     <form id="form1" runat="server">
 		<div class="container">
-		<table id="example" class="display responsive" style="width:100%">
+		<table id="exa" class="display responsive" style="width:100%" runat="server">
         <thead>
             <tr>
                 <th>Usuario</th>
@@ -46,20 +46,23 @@
         </thead>
         <tbody>
 		<asp:Repeater runat="server" ID="rptrqdesk" ItemType="rqdesk.usuario">
-			<ItemTemplate>
-				<td><%# Container.ItemIndex + 1 %></td>
-				<td><%# Item.usuario1  %></td>
+			<ItemTemplate runat="server">
+			
+				<td><asp:HiddenField ID="editarcamp" Value="<%# Item.id %>" runat="server" /></td>
 				<td><%# Item.contrasena  %></td>
 				<td><%# Item.privilegio %></td>
-				<td>Edit</td>
-				<td>Delete</td>
+				<td><asp:Button ID="btnEditar" runat="server" type="button" class="btn btn-lg btn-primary btn-block" Text="Editar" style="background-color:limegreen" OnClick="btnEditar_Click"></asp:Button></td>
+				<td><i class="fas fa-trash-alt"></i></td>
+				
 			</ItemTemplate>
 
 		</asp:Repeater>
 
 
+
 			</tbody>
 			</table>
+			
 			</div>
     </form>
 </body>
