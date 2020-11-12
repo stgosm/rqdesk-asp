@@ -19,7 +19,7 @@ namespace rqdesk
         protected void btnEditar_Click(object sender, EventArgs e)
         {
             Editar ed = new Editar();
-            ed.Buscar(editarcamp.value);
+           
         }
     }
 }
