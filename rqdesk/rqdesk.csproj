@@ -201,6 +201,10 @@
     <Compile Include="requirements.aspx.designer.cs">
       <DependentUpon>requirements.aspx</DependentUpon>
     </Compile>
+    <Compile Include="requirements.cs">
+      <DependentUpon>requirementsModel.tt</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="requirementsModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
